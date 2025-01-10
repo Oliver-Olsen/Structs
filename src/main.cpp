@@ -100,6 +100,12 @@ void loop() {
 }
 
 
+
+/**
+ * @brief Prints the incoming animals corrosponding data
+ * 
+ * @param animal Info for the animal
+ */
 void printAnimals(struct Animals animal){
   Serial.println(animal.family);
   Serial.println(animal.weight);
@@ -109,8 +115,17 @@ void printAnimals(struct Animals animal){
 }
 
 
+
+/**
+ * @brief Swaps the weight between two animals
+ * 
+ * @param animal_1 
+ * @param animal_2 
+ */
 void swapWeight(struct Animals *animal_1, struct Animals *animal_2){
   float cache;
+
+  // Briefly stores the weight of animal_1
   cache = animal_1 -> weight;
 
   animal_1 -> weight = animal_2 ->weight;
